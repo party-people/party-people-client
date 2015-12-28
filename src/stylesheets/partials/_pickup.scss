@@ -1,0 +1,155 @@
+$pickup_height: 400px;
+
+#pickup {
+  width: 100%;
+  height: $pickup_height;
+  background-color: #eee;
+  .pickup__inner {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+  .pickup__main {
+    float: left;
+    width: 60%;
+    height: 100%;
+  }
+  .pickup__sub {
+    float: right;
+    width: 40%;
+    height: 100%;
+    & > div {
+      width: 100%;
+      height: 50%;
+    }
+  }
+  .pickup__sub01 {
+  }
+  .pickup__sub02 {
+  }
+  .pickup__item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .item__image {
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+    .item__content {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 50%;
+      color: #e7e7e7;
+      background: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.8));
+      .item__content__wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 2% 5%;
+      }
+      .item__content__inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .item__title {
+        margin: 0;
+        color: #fff;
+      }
+      .item__info {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      .item__contributor {
+        float: left;
+        .contributor__avator {
+          float: left;
+        }
+        .contributor__name {
+          float: left;
+        }
+      }
+      .item__views {
+        float: right;
+      }
+    }
+  }
+  .pickup__main {
+    .item__title {
+      font-size: 22px;
+    }
+    .item_description {
+      padding-top: 10px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+    $info_height: 30px;
+    .item__info {
+      height: $info_height;
+    }
+    .contributor__avator {
+      height: $info_height;
+      width: $info_height;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+    .contributor__name {
+      line-height: $info_height;
+      padding: 0 8px;
+      font-size: 13px;
+    }
+    .item__views {
+      line-height: $info_height;
+      font-size: 13px;
+      .views {
+        padding-right: 3px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+  .pickup__sub {
+    .item__title {
+      font-size: 16px;
+    }
+    .item_description {
+      padding-top: 5px;
+      font-size: 11px;
+      line-height: 20px;
+    }
+    $info_height: 25px;
+    .item__info {
+      height: $info_height;
+    }
+    .contributor__avator {
+      height: $info_height;
+      width: $info_height;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+    .contributor__name {
+      line-height: $info_height;
+      padding: 0 4px;
+      font-size: 11px;
+    }
+    .item__views {
+      line-height: $info_height;
+      font-size: 11px;
+      .views {
+        padding-right: 3px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+  }
+}
