@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/party-people/party-people-client#readme",
   "devDependencies": {
-    "gulp": "^3.9.0"
+    "gulp": "^3.9.0",
+    "gulp-minify-html": "^1.0.5",
+    "gulp-plumber": "^1.0.1"
   }
 }
