@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/party-people/party-people-client/issues"
   },
-  "homepage": "https://github.com/party-people/party-people-client#readme"
+  "homepage": "https://github.com/party-people/party-people-client#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
 }
