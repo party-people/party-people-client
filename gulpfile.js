@@ -19,9 +19,16 @@ gulp.task(
 gulp.task('compile', ['compile-html']);
 
 gulp.task(
+  'watch',
+  function() {
+    gulp.watch('src/**/*', ['compile'])
+  }
+);
+
+gulp.task(
   'webserver',
   function() {
-    gulp.src('./dist')
+    gulp.src('./dist/')
       .pipe(webserver({
         livereload: true,
         open: true,
