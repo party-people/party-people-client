@@ -1,6 +1,9 @@
 var gulp = require('gulp');
+var $ = require('gulp-load-plugins')();
+var cssmin      = require('gulp-cssmin');
 var minifyHTML  = require('gulp-minify-html');
 var plumber     = require('gulp-plumber');
+var rename      = require('gulp-rename');
 var webserver   = require('gulp-webserver');
 
 gulp.task(
@@ -16,7 +19,19 @@ gulp.task(
   }
 );
 
-gulp.task('compile', ['compile-html']);
+gulp.task(
+  'compile-sass',
+  function() {
+    gulp.src('./src/stylesheets/*scss')
+      .pipe(plumber())
+      .pipe($.sass())
+      .pipe(cssmin())
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest('./css'));
+  }
+);
+
+gulp.task('compile', ['compile-html', 'compile-sass']);
 
 gulp.task(
   'watch',
