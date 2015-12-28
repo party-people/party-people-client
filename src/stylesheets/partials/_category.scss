@@ -1,0 +1,18 @@
+#category {
+  width: 150px;
+  border-right: 1px solid #eee;
+  .category_list {
+
+  }
+  .category__item {
+    padding: 15px 0 15px 8px;
+    color: $text_color_normal;
+    font-size: 12px;
+    &.active, &:hover {
+      background-color: #eee;
+      font-weight: 600;
+      border-right: 2px solid #ddd;
+      cursor: pointer;
+    }
+  }
+}
