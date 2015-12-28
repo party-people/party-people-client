@@ -18,26 +18,28 @@
     <div id="root" class="wrapper">
       <!-- HEADER
       ================================================== -->
-      <header class="header">
+      <header id="header" class="header">
         <div class="header__inner">
           <h1 class="header__logo">
-            LOGO
+            <a href="/">
+              LOGO
+            </a>
           </h1>
           <div class="header__search">
-            <form>
-              <input type="text" placeholder="気になるワードを入力">
-              <input type="submit">
+            <form class="search__form">
+              <input class="search__input" type="text" placeholder="気になるワードを入力">
+              <input class="search__button" type="submit" value=" ">
             </form>
           </div>
-          <ul class="header__menu">
+          <ul class="header__menu clearfix">
             <li class="header__item">
-              まとめ作成
+              <a href="#">まとめ作成</a>
             </li>
             <li class="header__item">
-              会員登録
+              <a href="#">会員登録</a>
             </li>
             <li class="header__item">
-              ログイン
+              <a href="#">ログイン</a>
             </li>
           </ul>
         </div>
