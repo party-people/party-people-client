@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var minifyHTML  = require('gulp-minify-html');
 var plumber     = require('gulp-plumber');
+var webserver   = require('gulp-webserver');
 
 gulp.task(
   'compile-html',
@@ -15,5 +16,18 @@ gulp.task(
   }
 );
 
-gulp.task('compile', ['compile-html'])
-gulp.task('default', ['compile']);
+gulp.task('compile', ['compile-html']);
+
+gulp.task(
+  'webserver',
+  function() {
+    gulp.src('./dist')
+      .pipe(webserver({
+        livereload: true,
+        open: true,
+        port: 8888
+      }));
+  }
+);
+
+gulp.task('default', ['compile', 'webserver']);
