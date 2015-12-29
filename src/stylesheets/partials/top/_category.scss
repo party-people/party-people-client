@@ -1,13 +1,15 @@
 #category {
   float: left;
-  width: 150px;
+  width: $top_category_width;
   .category_list {
 
   }
   .category__item {
-    padding: 15px 0 15px 8px;
+    height: $top_category_height;
+    padding-left: 8px;
     color: $text_color_normal;
     font-size: 12px;
+    line-height: $top_category_height;
     &.active, &:hover {
       background-color: #eee;
       font-weight: 600;

@@ -1,13 +1,15 @@
 #timeline {
   float: left;
-  width: 500px;
-  padding: 0 30px;
+  width: $top_timeline_width - 2px;
   border-right: 1px solid #eee;
   border-left: 1px solid #eee;
+  .timeline__inner {
+    padding: 0 20px;
+  }
   .timeline__header {
     position: relative;
     width: 100%;
-    height: 48px;
+    height: $top_category_height;
     border-bottom: 1px solid #eee;
     h3 {
       position: absolute;

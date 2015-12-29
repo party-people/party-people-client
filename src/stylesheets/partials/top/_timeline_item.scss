@@ -31,7 +31,7 @@ $timeline_item_height: 100px;
   .item__description {
     margin-top: 5px;
     color: $text_color_normal;
-    font-size: 11px;
+    font-size: 10px;
   }
   .item__info {
     position: absolute;
@@ -54,13 +54,13 @@ $timeline_item_height: 100px;
       float: left;
       padding-left: 5px;
       color: $text_color_normal;
-      font-size: 12px;
+      font-size: 11px;
     }
   }
   .item__views {
     float: right;
     color: $text_color_normal;
-    font-size: 11px;
+    font-size: 10px;
     .views {
       padding-right: 2px;
       font-size: 14px;

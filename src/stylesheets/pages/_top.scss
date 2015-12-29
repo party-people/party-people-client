@@ -1,13 +1,20 @@
-#wrapper {
-  width: $content_width;
-  margin: 50px auto;
+$top_wrapper_width: $content_width;
+$top_category_width: 140px;
+$top_sidebar_width: 320px;
+$top_timeline_width: $top_wrapper_width - $top_category_width - $top_sidebar_width;
 
+$top_category_height: 40px;
+
+#wrapper {
+  width: $top_wrapper_width;
+  margin: 50px auto;
   #main-content {
     float: left;
+    width: $top_category_width - $top_timeline_width;
   }
   #side-content {
     float: left;
-    width: 248px;
+    width: $top_sidebar_width;
   }
 }
 
