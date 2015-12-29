@@ -1,4 +1,12 @@
 #wrapper {
   width: $content_width;
   margin: 50px auto;
+
+  #main-content {
+    float: left;
+  }
+  #side-content {
+    float: left;
+    width: 248px;
+  }
 }
