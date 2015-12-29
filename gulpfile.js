@@ -9,7 +9,7 @@ var webserver   = require('gulp-webserver');
 gulp.task(
   'compile-html',
   function() {
-    gulp.src('./src/html/index.html')
+    gulp.src('./src/html/*html')
       .pipe(plumber())
       .pipe(minifyHTML({
         conditionals: true,
