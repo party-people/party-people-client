@@ -12,9 +12,7 @@ $timeline_item_height: 100px;
     float: left;
     width: $timeline_item_height;
     height: $timeline_item_height;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include aspect_fill(top);
   }
   .item__content {
     position: relative;
@@ -46,9 +44,7 @@ $timeline_item_height: 100px;
       float: left;
       width: 20px;
       height: 20px;
-      background-position: center top;
-      background-repeat: no-repeat;
-      background-size: cover;
+      @include aspect_fill;
     }
     .contributor__name {
       float: left;

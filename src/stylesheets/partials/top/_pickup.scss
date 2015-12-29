@@ -34,9 +34,7 @@ $pickup_height: 400px;
     .item__image {
       width: 100%;
       height: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center top;
+     @include aspect_fill(top);
     }
     .item__content {
       position: absolute;
@@ -98,9 +96,7 @@ $pickup_height: 400px;
     .contributor__avator {
       height: $info_height;
       width: $info_height;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
+      @include aspect_fill;
     }
     .contributor__name {
       line-height: $info_height;
@@ -133,9 +129,7 @@ $pickup_height: 400px;
     .contributor__avator {
       height: $info_height;
       width: $info_height;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
+      @include aspect_fill;
     }
     .contributor__name {
       line-height: $info_height;

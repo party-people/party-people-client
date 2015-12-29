@@ -27,9 +27,7 @@
     float: left;
     width: $side_content_item_height;
     height: $side_content_item_height;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include aspect_fill(top);
   }
   .item__content {
     position: relative;

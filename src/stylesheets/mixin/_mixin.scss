@@ -1,0 +1,5 @@
+@mixin aspect_fill($top_position: center) {
+  background-position: center $top_position;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
