@@ -1,0 +1,31 @@
+$new_header_height: 60px;
+$new_header_inner_height: 40px;
+
+#new-header {
+  padding: ($new_header_height - $new_header_inner_height)/2 0;
+  background-color: #eee;
+  .header__inner {
+    width: $content_width;
+    height: $new_header_inner_height;
+    margin: 0 auto;
+  }
+  .header__menu {
+    float: right;
+  }
+  .menu__item {
+    float: left;
+    padding-left: 10px;
+    .btn {
+      display: inline-block;
+      padding: 0 20px;
+      background-color: #fff;
+      font-size: 13px;
+      line-height: $new_header_inner_height - 2px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
