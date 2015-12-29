@@ -18,30 +18,4 @@
   .side__content__item {
     border-bottom: 1px solid #eee;
   }
-  .item__inner {
-    position: relative;
-    height: $side_content_item_height;
-    padding: 10px 0;
-  }
-  .item__image {
-    float: left;
-    width: $side_content_item_height;
-    height: $side_content_item_height;
-    @include aspect_fill(top);
-  }
-  .item__content {
-    position: relative;
-    float: left;
-    width: calc(100% - #{$side_content_item_height} - 16px);
-    height: $side_content_item_height;
-    margin: 0 8px;
-  }
-  .item__title {
-    color: $text_color_normal;
-    font-size: 12px;
-  }
-  .contributor__name {
-    font-size: 10px;
-    color: #bbb;
-  }
 }

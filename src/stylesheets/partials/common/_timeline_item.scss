@@ -1,34 +1,24 @@
 $timeline_item_height: 100px;
 
-.timeline__item {
-  border-bottom: 1px solid #eee;
+.timeline__item { 
   .item__inner {
-    position: relative;
-    width: 100%;
     height: $timeline_item_height;
     padding: 15px 0;
   }
   .item__image {
-    float: left;
     width: $timeline_item_height;
     height: $timeline_item_height;
-    @include aspect_fill(top);
   }
   .item__content {
-    position: relative;
-    float: left;
     width: calc(100% - #{$timeline_item_height} - 20px);
     height: $timeline_item_height;
     margin: 0 10px;
   }
   .item__title {
-    margin: 0;
-    color: $text_color_normal;
     font-size: 15px;
   }
   .item__description {
     margin-top: 5px;
-    color: $text_color_normal;
     font-size: 10px;
   }
   .item__info {
@@ -39,28 +29,20 @@ $timeline_item_height: 100px;
     height: 20px;
   }
   .item__contributor {
-    float: left;
     .contributor__avator {
-      float: left;
       width: 20px;
       height: 20px;
-      @include aspect_fill;
     }
     .contributor__name {
-      float: left;
       padding-left: 5px;
-      color: $text_color_normal;
       font-size: 11px;
     }
   }
   .item__views {
-    float: right;
-    color: $text_color_normal;
     font-size: 10px;
     .views {
       padding-right: 2px;
       font-size: 14px;
-      font-weight: 600;
     }
   }
 }

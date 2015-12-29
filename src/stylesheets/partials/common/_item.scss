@@ -1,0 +1,40 @@
+.item {
+  border-bottom: 1px solid #eee;
+  .item__inner {
+    position: relative;
+  }
+  .item__image {
+    @include aspect_fill;
+    float: left;
+  }
+  .item__content {
+    position: relative;
+    float: left;
+  }
+  .item__title {
+    color: $text_color_normal;
+  }
+  .item__description {
+    color: #aaa;
+  }
+  .item__info {
+  }
+  .item__contributor {
+    position: absolute;
+    .contributor__avator {
+      @include aspect_fill;
+      float: left;
+    }
+    .contributor__name {
+      float: left;
+      color: $text_color_normal;
+    }
+  }
+  .item__views {
+    float: right;
+    color: #aaa;
+    .views {
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+$list_item_height: 60px;
+
+.list__item { 
+  .item__inner {
+    height: $list_item_height;
+    padding: 10px 0;
+  }
+  .item__image {
+    width: $list_item_height;
+    height: $list_item_height;
+  }
+  .item__content {
+    width: calc(100% - #{$list_item_height} - 16px);
+    height: $list_item_height;
+    margin: 0 8px;
+  }
+  .item__title {
+    font-size: 12px;
+  }
+  .item__contributor {
+    height: 15px;
+    bottom: 0;
+    .contributor__name {
+      position: absolute;
+      font-size: 10px;
+    }
+  }
+}
