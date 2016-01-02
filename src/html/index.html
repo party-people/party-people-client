@@ -13,6 +13,7 @@
     <meta property="og:description" content="" />
 
     <link rel="stylesheet" type="text/css" href="./css/style.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
   <body>
     <div id="root">
@@ -28,7 +29,10 @@
           <div class="header__search">
             <form class="search__form">
               <input class="search__input" type="text" placeholder="気になるワードを入力">
-              <input class="search__button" type="submit" value=" ">
+              <div class="search__submit">
+                <input class="search__button" type="submit" value=" ">
+                <i class="fa fa-search search__icon" />
+              </div>
             </form>
           </div>
           <ul class="header__menu clearfix">
@@ -145,22 +149,24 @@
               </header>
               <ul class="timeline__list">
                 <li class="timeline__item item">
-                  <div class="item__inner clearfix">
-                    <div class="item__image" style="background-image: url(http://content.mery.jp/1100x2000/images/1450564/large.png/original);"></div>
-                    <div class="item__content">
-                      <h5 class="item__title">黒髪にしたのなら。ヒロイン級の”さらさら天使の輪”な美髪をなびかせましょ♡</h5>
-                      <p class="item__description">黒髪にしました。でも、黒髪って重くてダメージが目立つような...</p>
-                      <div class="item__info clearfix">
-                        <div class="item__contributor clearfix">
-                          <div class="contributor__avator" style="background-image: url(http://dqaeric34olch.cloudfront.net/lists/193783/11351862_519618564846099_858988870_n.jpg/thumb?1451200977);"></div>
-                          <p class="contributor__name">tsubasa_honda</p>
+                  <a href="/article.html">
+                    <div class="item__inner clearfix">
+                      <div class="item__image" style="background-image: url(http://content.mery.jp/1100x2000/images/1450564/large.png/original);"></div>
+                      <div class="item__content">
+                        <h5 class="item__title">黒髪にしたのなら。ヒロイン級の”さらさら天使の輪”な美髪をなびかせましょ♡</h5>
+                        <p class="item__description">黒髪にしました。でも、黒髪って重くてダメージが目立つような...</p>
+                        <div class="item__info clearfix">
+                          <div class="item__contributor clearfix">
+                            <div class="contributor__avator" style="background-image: url(http://dqaeric34olch.cloudfront.net/lists/193783/11351862_519618564846099_858988870_n.jpg/thumb?1451200977);"></div>
+                            <p class="contributor__name">tsubasa_honda</p>
+                          </div>
+                          <p class="item__views">
+                            <span class="views">12345</span>view
+                          </p>
                         </div>
-                        <p class="item__views">
-                          <span class="views">12345</span>view
-                        </p>
                       </div>
                     </div>
-                  </div>
+                  </a>
                 </li>
                 <li class="timeline__item item">
                   <div class="item__inner clearfix">
