@@ -1,0 +1,38 @@
+.article__item {
+  position: relative;
+  .article__item__content {
+    padding: 5px 0;
+  }
+
+  .article__item--text {
+    color: #666;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  .article__item--headline {
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+    border-bottom: 2px solid #ddd;
+  }
+  .article__item--quotation {
+    .quotation__text {
+      padding: 15px 10px 5px 20px;
+      color: #888;
+      font-size: 18px;
+      font-weight: 600;
+      background-image: url(https://s3-ap-northeast-1.amazonaws.com/mery-assets/1429605630446/images/quote_bg.e166ee42.png);
+      background-repeat: no-repeat;
+    }
+    .quotation__link {
+      padding: 3px 0;
+      color: #777;
+      font-size: 11px;
+    }
+    .quotation__comment {
+      padding-left: 14px;
+      font-size: 15px;
+      border-left: 2px solid #ddd;
+    }
+  }
+}

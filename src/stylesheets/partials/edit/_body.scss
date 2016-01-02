@@ -7,14 +7,17 @@
     border: 1px solid #ddd;
     box-sizing: border-box;
   }
-  .article__item {
-    position: relative;
-  }
   .article__item--draft {
     padding: 10px 15px;
+    .article__item__control, .article__item__edit {
+      opacity: 0;
+    }
     &:hover {
       background-color: #eee;
       cursor: pointer;
+      .article__item__control, .article__item__edit {
+        opacity: 1;
+      }
     }
   }
   .article__item__control {
@@ -32,9 +35,6 @@
       text-align: center;
       letter-spacing: normal;
     }
-  }
-  .article__item__content {
-
   }
   .article__item__edit {
     font-size: 12px;
