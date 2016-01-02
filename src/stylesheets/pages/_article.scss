@@ -1,5 +1,13 @@
 #article {
-
+  #main-content {
+    width: 70%;
+    padding-right: 30px;
+    border-right: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+  #side-content {
+    width: 30%;
+  }
 }
 
 @import '../partials/article/header';
