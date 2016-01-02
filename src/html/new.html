@@ -47,20 +47,46 @@
       <!-- NEW
       ================================================== -->
       <div id="new">
-        <!-- HEADER
+        <!-- EDIT EREA
         ================================================== -->
-        <header id="new-header">
-          <div class="header__inner clearfix">
-            <ul class="header__menu clearfix">
-              <li class="menu__item">
-                <a class="btn">下書き保存</a>
-              </li>
-              <li class="menu__item">
-                <a class="btn">公開する</a>
-              </li>
-            </ul>
-          </div>
-        </header>
+        <div id="edit-erea">
+          <!-- FORM
+          ================================================== -->
+          <form id="edit-form">
+            <!-- HEADER
+            ================================================== -->
+            <header id="edit-header">
+              <div class="header__inner clearfix">
+                <ul class="header__menu clearfix">
+                  <li class="menu__item">
+                    <input class="btn" type="submit" value="下書き保存">
+                  </li>
+                  <li class="menu__item">
+                    <input class="btn" type="submit" value="公開する">
+                  </li>
+                </ul>
+              </div>
+            </header>
+             <!-- INFO
+            ================================================== -->
+            <div id="edit-info">
+              <div class="info__inner">
+                <div class="info__image">
+                  <input class="image__input" type="file" name="article[thumbnail]">
+                  <img class="article__image" src="http://miyagifukkououentai.jp/wp/wp-content/themes/ifeaturepro/noimage.jpg">
+                </div>
+                <div class="info__text">
+                  <div class="info__title">
+                    <input class="title__input" type="text" name="article[title]" placeholder="まとめのタイトル">
+                  </div>
+                  <div class="info__description">
+                    <textarea class="description__textarea" name="article[description]">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </body>

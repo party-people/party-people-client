@@ -1,7 +1,7 @@
 $new_header_height: 60px;
 $new_header_inner_height: 40px;
 
-#new-header {
+#edit-header {
   padding: ($new_header_height - $new_header_inner_height)/2 0;
   background-color: #eee;
   .header__inner {
