@@ -1,5 +1,52 @@
-$edit_info_height: 300px;
+$edit_image_size: 220px;
+
 
 #edit-info {
-
+  .info__inner {
+    width: $content_width;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  .info__image {
+    float: left;
+    .image__input {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: $edit_image_size;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .article__image {
+      max-width: $edit_image_size;
+      max-height: $edit_image_size;
+      background: #ddd;
+    }
+  }
+  .info__text {
+    position: relative;
+    float: right;
+    width: calc(100% - #{$edit_image_size} - 20px);
+    height: $edit_image_size;
+    input, textarea {
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    .title__input {
+      position: absolute;
+      top: 0;
+      height: 50px;
+      font-size: 20px;
+    }
+    .description__textarea {
+      position: absolute;
+      bottom: 0;
+      height: 130px;
+      font-size: 18px;
+    }
+  }
 }
