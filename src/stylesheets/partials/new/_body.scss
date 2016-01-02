@@ -1,0 +1,36 @@
+#edit-body {
+  margin: 100px 0 50px 0;
+  .body__inner {
+    width: $content_width;
+    margin: 0 auto;
+    padding: 30px 20px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+  .article__item {
+    position: relative;
+  }
+  .article__item--draft {
+    padding: 10px 15px;
+    &:hover {
+      background-color: #eee;
+      cursor: pointer;
+    }
+  }
+  .article__item__control {
+    text-align: right;
+  }
+  .article__item__content {
+
+  }
+  .article__item__edit {
+    font-size: 12px;
+    text-align: right;
+    a {
+      color: #337ab7;
+    }
+    span {
+      color: #555;
+    }
+  }
+}
