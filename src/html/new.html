@@ -102,7 +102,7 @@
                   <div class="items__newitem__inner">
                     <!-- TEXT FORM
                     ================================================== -->
-                    <div id="textForm" class="items__newitem--text" style="display: block;">
+                    <div id="textForm" class="items__newitem--text" style="display: none;">
                       <form class="items__form--text">
                         <input type="hidden" name="item[type]" value="text">
                         <textarea class="item__form__textarea" name="item[text]" placeholder="テキストを入力"></textarea>
@@ -126,23 +126,23 @@
                     </div>
                     <!-- IMAGE FORM
                     ================================================== -->
-                    <div id="imageForm" class="items__newitem--image" style="display: none;">
+                    <div id="imageForm" class="items__newitem--image" style="display: block;">
                       <input type="hidden" name="item[type]" value="image">
                       <form class="items__form--image">
-                        <div class="items__form--image__inner">
+                        <div class="items__form--image__inner clearfix">
                           <div class="form__image">
                             <input class="image__input" type="file" name="article[thumbnail]">
-                            <img class="article__image" src="http://miyagifukkououentai.jp/wp/wp-content/themes/ifeaturepro/noimage.jpg">
+                            <img class="item__image" src="http://miyagifukkououentai.jp/wp/wp-content/themes/ifeaturepro/noimage.jpg">
                           </div>
                           <div class="form__area">
                             <div class="item__form__input__area clearfix">
                               <input class="item__form__input" name="item[link]" placeholder="画像のURLを入力">
                               <a class="btn item__form__button--check">チェックする</a>
                             </div>
-                          </div>
-                          <div class="item__form__buttons clearfix">
-                            <a class="btn item__form__button--add">追加</a>
-                            <a class="btn item__form__button--cancel">キャンセル</a>
+                            <div class="item__form__buttons clearfix">
+                              <a class="btn item__form__button--add">追加</a>
+                              <a class="btn item__form__button--cancel">キャンセル</a>
+                            </div>
                           </div>
                         </div>
                       </form>
@@ -167,12 +167,14 @@
                     <div id="quotationForm" class="items__newitem--quotation" style="display: none;">
                       <form class="items__form--quotation">
                         <input type="hidden" name="item[type]" value="quotation">
-                        <textarea class="item__form__textarea" name="item[quotation]" placeholder="引用を入力"></textarea>
-                        <div class="item__form__input__area clearfix">
-                          <input class="item__form__input" name="item[quotation_link]" placeholder="引用の出典元URLを入力">
-                          <a class="btn item__form__button--check">チェックする</a>
+                        <input class="item__form__input" name="item[quotation]" placeholder="引用を入力">
+                        <div class="item__form__subinfo">
+                          <div class="item__form__input__area clearfix">
+                            <input class="item__form__input" name="item[quotation_link]" placeholder="引用の出典元URLを入力">
+                            <a class="btn item__form__button--check">チェックする</a>
+                          </div>
+                          <input class="item__form__input" name="item[quotation_source]" placeholder="引用の出典を入力">
                         </div>
-                        <input class="item__form__input" name="item[quotation_source]" placeholder="引用の出典を入力">
                         <div class="item__form__buttons clearfix">
                           <a class="btn item__form__button--add">追加</a>
                           <a class="btn item__form__button--cancel">キャンセル</a>

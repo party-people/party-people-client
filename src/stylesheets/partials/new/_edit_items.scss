@@ -1,0 +1,106 @@
+#edit-items {
+  .items__inner {
+    width: $content_width;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+  }
+  .items__header__list {
+    background-color: #eee;
+  }
+  .items__header__item {
+    float: left;
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    border-right: 1px solid #fff;
+    a {
+      line-height: 40px;
+    }
+    &.active {
+      background-color: #fff;
+    }
+  }
+  .items__newitem__inner {
+    padding: 20px;
+    input, textarea {
+      display: block;
+      width: 100%;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+    .btn {
+      display: block;
+      float: left;
+      margin-right: 5px;
+      padding: 10px 14px;
+      font-size: 12px;
+      border: 1px solid #ddd;
+      border-radius: 2px;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+    .item__form__input {
+      height: 40px;
+      font-size: 14px;
+    }
+    .item__form__textarea {
+      height: 60px;
+      font-size: 14px;
+    }
+    .item__form__input__area {
+      input {
+        float: left;
+        width: calc(100% - 120px);
+      }
+      .btn {
+        float: right;
+      }
+    }
+    .item__form__buttons {
+      margin-top: 15px;
+    }
+  }
+}
+
+#imageForm {
+  .form__image {
+    position: relative;
+    float: left;
+    .image__input {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 180px;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .item__image {
+      max-width: 180px;
+      max-height: 180px;
+      background: #ddd;
+    }
+  }
+  .form__area {
+    float: right;
+    width: calc(100% - 180px - 20px);
+  }
+}
+
+#quotationForm {
+  .item__form__subinfo {
+    margin: 15px 0;
+    .item__form__input__area {
+      margin-bottom: 8px;
+    }
+    input {
+      width: calc(100% - 120px);
+    }
+  }
+}
