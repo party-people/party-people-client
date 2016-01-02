@@ -1,0 +1,89 @@
+$article_header_image_size: 120px;
+$article_header_sub_width: 220px;
+$article_header_avatar_size: 26px;
+
+#article-header {
+  background-color: #fafafa;
+  .header__inner {
+    width: $content_width;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  .article__header--main {
+    float: left;
+    width: calc(100% - #{$article_header_sub_width} - 20px);
+    .article__image {
+      float: left;
+      img {
+        width: $article_header_image_size;
+        height: $article_header_image_size;
+      }
+    }
+    .article__content {
+      float: right;
+      width: calc(100% - #{$article_header_image_size} - 20px);
+    }
+    .article__title {
+      color: #333;
+      font-size: 22px;
+      font-weight: 600;
+    }
+    .article__description {
+      margin: 10px 0;
+      color: #999;
+      font-size: 13px;
+      font-weight: 400;
+    }
+    .article__info {
+      color: #999;
+      font-size: 11px;
+    }
+    .contributor__avator {
+      width: $article_header_avatar_size;
+      height: $article_header_avatar_size;
+      vertical-align: middle;
+    }
+    .contributor__name, .article__updated-at {
+      padding: 5px;
+      color: #999;
+    }
+  }
+  .article__header--sub {
+    float: right;
+    width: $article_header_sub_width;
+    .article__count__content {
+      float: left;
+      width: 50%;
+      padding: 20px 0;
+      text-align: center;
+      box-sizing: border-box;
+      &:first-child {
+        border-right: 1px solid #ddd;
+      }
+      .article__count__count {
+        font-size: 22px;
+        font-weight: 600;
+      }
+      .article__count__text {
+        font-size: 10px;
+        font-weight: 400;
+      }
+    }
+    .article__fav {
+      margin-top: 20px;
+      text-align: center;
+      .article__fav-btn {
+        display: inline-block;
+        width: 100%;
+        padding: 10px 0;
+        background-color: #fff;
+        font-size: 13px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        .fa {
+          padding-right: 3px;
+        }
+      }
+    }
+  }
+}
