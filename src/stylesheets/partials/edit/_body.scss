@@ -19,6 +19,19 @@
   }
   .article__item__control {
     text-align: right;
+    letter-spacing: -.40em;
+    .control__item {
+      // padding: 4px 6px;
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      padding: 0;
+      margin: 0;
+      line-height: 26px;
+      border: 1px solid #ddd;
+      text-align: center;
+      letter-spacing: normal;
+    }
   }
   .article__item__content {
 
@@ -26,6 +39,9 @@
   .article__item__edit {
     font-size: 12px;
     text-align: right;
+    i {
+      padding-right: 1px;
+    }
     a {
       color: #337ab7;
     }
