@@ -25,7 +25,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.1.1",
     "gulp-watch": "^4.3.5",
-    "gulp-webserver": "^0.9.1"
+    "gulp-webserver": "^0.9.1",
+    "redux-devtools": "^3.0.1"
   },
   "dependencies": {
     "react": "^0.14.5",
