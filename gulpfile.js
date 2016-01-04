@@ -1,10 +1,12 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var babel       = require('gulp-babel');
+var concat      = require('gulp-concat');
 var cssmin      = require('gulp-cssmin');
 var minifyHTML  = require('gulp-minify-html');
 var plumber     = require('gulp-plumber');
 var rename      = require('gulp-rename');
+var uglify      = require('gulp-uglify');
 var webserver   = require('gulp-webserver');
 
 gulp.task(
@@ -32,7 +34,20 @@ gulp.task(
   }
 );
 
-gulp.task('compile', ['compile-html', 'compile-sass']);
+gulp.task(
+  'compile-es6',
+  function() {
+    gulp.src('./src/javascripts/*js')
+      .pipe(plumber())
+      .pipe(babel())
+      .pipe(concat('index.js'))
+      .pipe(uglify())
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest('./dist/js'));
+  }
+)
+
+gulp.task('compile', ['compile-html', 'compile-sass', 'compile-es6']);
 
 gulp.task(
   'watch',
