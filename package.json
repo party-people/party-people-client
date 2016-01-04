@@ -18,6 +18,7 @@
   "homepage": "https://github.com/party-people/party-people-client#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.1",
     "gulp-cssmin": "^0.1.7",
     "gulp-load-plugins": "^1.1.0",
     "gulp-minify-html": "^1.0.5",
