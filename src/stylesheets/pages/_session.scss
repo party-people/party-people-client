@@ -1,3 +1,24 @@
 #session {
-
+  position: relative;
+  width: 100%;
+  height: calc(100% - #{$header_height});
+  background-image: url(http://41.media.tumblr.com/da31a044f663fa7ea3f23b9235ab447f/tumblr_o0d88hJ7Z41tkairwo1_1280.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  .session__mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .session__inner {
+    width: $content_width;
+    margin: 0 auto;
+  }
 }
+
+@import '../partials/session/sign_up_form';
