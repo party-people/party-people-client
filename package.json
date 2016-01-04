@@ -33,6 +33,7 @@
     "gulp-watch": "^4.3.5",
     "gulp-webserver": "^0.9.1",
     "redux-devtools": "^3.0.1",
+    "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
