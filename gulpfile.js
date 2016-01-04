@@ -1,6 +1,5 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
-var babel       = require('gulp-babel');
 var concat      = require('gulp-concat');
 var cssmin      = require('gulp-cssmin');
 var minifyHTML  = require('gulp-minify-html');
@@ -8,6 +7,9 @@ var plumber     = require('gulp-plumber');
 var rename      = require('gulp-rename');
 var uglify      = require('gulp-uglify');
 var webserver   = require('gulp-webserver');
+var browserify  = require('browserify');
+var babelify    = require('babelify');
+var source      = require('vinyl-source-stream');
 
 gulp.task(
   'compile-html',
@@ -37,13 +39,16 @@ gulp.task(
 gulp.task(
   'compile-es6',
   function() {
-    gulp.src('./src/javascripts/*js')
-      .pipe(plumber())
-      .pipe(babel())
-      .pipe(concat('index.js'))
-      .pipe(uglify())
-      .pipe(rename({suffix: '.min'}))
-      .pipe(gulp.dest('./dist/js'));
+    browserify({
+      entries: ['./src/javascripts/index.js']
+    })
+    .transform(babelify)
+    .bundle()
+    .pipe(source('index.js'))
+    .pipe(plumber())
+    .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('./dist/js'));
   }
 )
 
