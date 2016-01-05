@@ -10,7 +10,7 @@ export default class TimelineItem extends Component {
     };
     return(
       <li className="timeline__item item">
-        <a href="/article.html">
+        <a href="/articles/1">
           <div className="item__inner clearfix">
             <div className="item__image" style={itemImageStyle}></div>
             <div className="item__content">
