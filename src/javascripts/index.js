@@ -7,6 +7,7 @@ import createBrowserHistory from 'history/lib/createBrowserHistory';
 import App from './containers/App';
 import Top from './containers/Top';
 import Article from './containers/Article';
+import Editor from './containers/Editor';
 import rootReducer from './reducers'
 
 const store = createStore(rootReducer);
@@ -14,6 +15,8 @@ const history = createBrowserHistory();
 const routes = (
   <Route component={ App }>
     <Route path="/" component={ Top } />
+    <Route path="/articles/new" component={ Editor } />
+    <Route path="/articles/:id/edit" component={ Editor } />
     <Route path="/articles/:id" component={ Article } />
   </Route>
 );

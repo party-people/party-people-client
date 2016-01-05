@@ -21,7 +21,7 @@ export default class Header extends Component {
           </div>
           <ul className="header__menu clearfix">
             <li className="header__item">
-              <a href="/edit.html">まとめ作成</a>
+              <a href="/articles/new">まとめ作成</a>
             </li>
             <li className="header__item">
               <a href="/signup.html">会員登録</a>
