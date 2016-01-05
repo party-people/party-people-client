@@ -6,6 +6,7 @@ import { createStore } from 'redux';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
 import App from './containers/App';
 import Top from './containers/Top';
+import Article from './containers/Article';
 import rootReducer from './reducers'
 
 const store = createStore(rootReducer);
@@ -13,6 +14,7 @@ const history = createBrowserHistory();
 const routes = (
   <Route component={ App }>
     <Route path="/" component={ Top } />
+    <Route path="/articles/:id" component={ Article } />
   </Route>
 );
 
