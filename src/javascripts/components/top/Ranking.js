@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import RankingHeader from './RankingHeader';
 
 export default class Ranking extends Component {
   render() {
@@ -7,10 +8,7 @@ export default class Ranking extends Component {
     };
     return(
       <div className="side__content">
-        <header className="side__content__header">
-          <h4 className="side__content__title">ランキング総合</h4>
-          <p className="side__content__subtitle">最近人気のあった記事</p>
-        </header>
+        <RankingHeader />
         <ul className="side__content__items">
           <li className="item list__item">
             <div className="item__inner clearfix">
