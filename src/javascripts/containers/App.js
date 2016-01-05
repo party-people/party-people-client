@@ -4,6 +4,7 @@ import Header from '../components/partials/Header';
 import Pickup from '../components/top/Pickup';
 import CategoryList from '../components/top/CategoryList';
 import Timeline from '../components/top/Timeline';
+import Ranking from '../components/top/Ranking';
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
             <Timeline />
           </div>
           <div id="side-content">
+            <Ranking />
           </div>
         </div>
       </div>
