@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Header from '../components/partials/Header';
 import Pickup from '../components/top/Pickup';
 import CategoryList from '../components/top/CategoryList';
+import Timeline from '../components/top/Timeline';
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <div id="wrapper" className="clearfix">
           <div id="main-content" className="clearfix">
             <CategoryList />
+            <Timeline />
           </div>
           <div id="side-content">
           </div>
