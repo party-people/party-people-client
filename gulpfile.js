@@ -34,10 +34,14 @@ gulp.task(
   'compile-es6',
   function() {
     browserify({
-      entries: ['./src/javascripts/index.js']
+      entries: ['./src/javascripts/index.js'],
+      debug: true
     })
     .transform(babelify)
     .bundle()
+    .on('error',function(error){
+      console.log(error.message);
+    })
     .pipe(source('index.js'))
     .pipe($.plumber())
     .pipe(buffer())
