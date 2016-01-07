@@ -13,14 +13,16 @@ function fetchTopRequest() {
 
 function fetchTopSuccess(body) {
   return {
-    type: FETCH_TOP_SUCCESS
+    type: FETCH_TOP_SUCCESS,
+    body
   };
 }
 
 
 function fetchTopFailure(ex) {
   return {
-    type: FETCH_TOP_FAILURE
+    type: FETCH_TOP_FAILURE,
+    ex
   };
 }
 

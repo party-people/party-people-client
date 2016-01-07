@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "history": "^1.17.0",
+    "normalizr": "^1.4.1",
     "react": "^0.14.5",
     "react-dom": "^0.14.5",
     "react-redux": "^4.0.6",
