@@ -24,10 +24,10 @@ export default class Header extends Component {
               <a href="/articles/new">まとめ作成</a>
             </li>
             <li className="header__item">
-              <a href="/signup.html">会員登録</a>
+              <a href="/sign_up">会員登録</a>
             </li>
             <li className="header__item">
-              <a href="#">ログイン</a>
+              <a href="/sign_in">ログイン</a>
             </li>
           </ul>
         </div>

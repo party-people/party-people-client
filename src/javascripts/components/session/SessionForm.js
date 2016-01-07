@@ -30,7 +30,7 @@ export default class SessionForm extends Component {
             <div className="form__submit">
               <input className="submit__button" type="submit" value="Create User" />
               <p className="form__annotation">
-                すでにアカウントをお持ちの方は<a href="#">ログイン</a>
+                すでにアカウントをお持ちの方は<a href="/sign_in">ログイン</a>
               </p>
             </div>
           </div>
