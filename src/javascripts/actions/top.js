@@ -24,4 +24,7 @@ function fetchTopFailure() {
 
 export function fetchTop() {
   console.log('fetch top');
+  return {
+    type: ''
+  }
 }
