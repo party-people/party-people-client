@@ -2,16 +2,15 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { Route, Router } from 'react-router';
-import { createStore } from 'redux';
 import createBrowserHistory from 'history/lib/createBrowserHistory';
+import configureStore from './store/configureStore';
 import App     from './containers/App';
 import Top     from './containers/Top';
 import Session from './containers/Session';
 import Article from './containers/Article';
 import Editor  from './containers/Editor';
-import rootReducer from './reducers'
 
-const store = createStore(rootReducer);
+const store = configureStore();
 const history = createBrowserHistory();
 const routes = (
   <Route component={ App }>
