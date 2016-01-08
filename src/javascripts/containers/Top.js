@@ -39,9 +39,11 @@ Top.propTypes = {
 
 function mapStateToProps(state) {
   const { 
-    top: { pickup, categories, ranking },
+    top: { categories },
   } = state;
-  const articles = denormalizeArticles(state.top.articles, state.entities)
+  const articles = denormalizeArticles(state.top.articles, state.entities);
+  const pickup = denormalizeArticles(state.top.pickup, state.entities);
+  const ranking = denormalizeArticles(state.top.ranking, state.entities);
   return { pickup, articles, categories, ranking };
 }
 

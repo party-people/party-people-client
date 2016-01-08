@@ -15,7 +15,9 @@ function fetchTopRequest() {
 
 function fetchTopSuccess(body) {
   const response = normalize(body, {
-    articles: Schemas.articles,
+    articles:   Schemas.articles,
+    pickup:     Schemas.articles,
+    ranking:    Schemas.articles,
     categories: Schemas.categories
   });
   return {
