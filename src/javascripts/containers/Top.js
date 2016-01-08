@@ -11,16 +11,17 @@ class Top extends Component {
     this.props.dispatch(fetchTop());
   }
   render() {
+    const { pickup, articles, categories, ranking } = this.props;
     return(
       <div id="top">
-        <Pickup />
+        <Pickup pickup={pickup} />
         <div id="wrapper" className="clearfix">
           <div id="main-content" className="clearfix">
-            <CategoryList />
-            <Timeline />
+            <CategoryList categories={categories} />
+            <Timeline articles={articles} />
           </div>
           <div id="side-content">
-            <Ranking />
+            <Ranking ranking={ranking} />
           </div>
         </div>
       </div>
@@ -36,7 +37,10 @@ Top.propTypes = {
 }
 
 function mapStateToProps(state) {
-  return { state };
+  const { 
+    top: { pickup, articles, categories, ranking }
+  } = state;
+  return { pickup, articles, categories, ranking };
 }
 
 export default connect(mapStateToProps)(Top);
