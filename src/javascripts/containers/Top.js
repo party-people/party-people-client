@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { fetchTop } from '../actions/top';
+import { denormalizeArticles } from '../api/article';
 import Pickup from '../components/top/Pickup';
 import CategoryList from '../components/top/CategoryList';
 import Timeline from '../components/top/Timeline';
@@ -38,8 +39,9 @@ Top.propTypes = {
 
 function mapStateToProps(state) {
   const { 
-    top: { pickup, articles, categories, ranking }
+    top: { pickup, categories, ranking },
   } = state;
+  const articles = denormalizeArticles(state.top.articles, state.entities)
   return { pickup, articles, categories, ranking };
 }
 
