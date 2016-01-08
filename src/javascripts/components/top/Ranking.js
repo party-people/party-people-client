@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import RankingHeader from './RankingHeader';
 import ListItem from '../partials/ListItem';
 
 export default class Ranking extends Component {
   render() {
-    const itemNodes = [1,2,3,4,5].map( (item) =>
-      <ListItem key={ item } />
+    const { articles } = this.props;
+    const itemNodes = articles.map( (article) =>
+      <ListItem key={article.id} article={article} />
     );
     return(
       <div className="side__content">
@@ -16,4 +17,8 @@ export default class Ranking extends Component {
       </div>
     );
   }
+}
+
+Ranking.propTypes = {
+  articles: PropTypes.array.isRequired
 }

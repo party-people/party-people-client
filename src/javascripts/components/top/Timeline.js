@@ -5,7 +5,7 @@ export default class Timeline extends Component {
   render() {
     const { articles } = this.props;
     const itemNodes = articles.map( (article) =>
-      <TimelineItem key={ article.id } article={article} />
+      <TimelineItem key={article.id} article={article} />
     );
     return(
       <div id="timeline">

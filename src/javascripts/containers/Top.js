@@ -16,14 +16,14 @@ class Top extends Component {
     const { pickup, articles, categories, ranking } = this.props;
     return(
       <div id="top">
-        <Pickup pickup={pickup} />
+        <Pickup articles={pickup} />
         <div id="wrapper" className="clearfix">
           <div id="main-content" className="clearfix">
             <CategoryList categories={categories} />
             <Timeline articles={articles} />
           </div>
           <div id="side-content">
-            <Ranking ranking={ranking} />
+            <Ranking articles={ranking} />
           </div>
         </div>
       </div>
