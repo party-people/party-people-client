@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { fetchTop } from '../actions/top';
 import Pickup from '../components/top/Pickup';
@@ -26,6 +26,13 @@ class Top extends Component {
       </div>
     );
   }
+}
+
+Top.propTypes = {
+  pickup: PropTypes.array.isRequired,
+  articles: PropTypes.array.isRequired,
+  categories: PropTypes.array.isRequired,
+  ranking: PropTypes.array
 }
 
 function mapStateToProps(state) {
