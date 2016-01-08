@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { fetchTop } from '../actions/top';
 import { denormalizeArticles } from '../api/article';
+import { denormalizeCategories } from '../api/category';
 import Pickup from '../components/top/Pickup';
 import CategoryList from '../components/top/CategoryList';
 import Timeline from '../components/top/Timeline';
@@ -38,12 +39,11 @@ Top.propTypes = {
 }
 
 function mapStateToProps(state) {
-  const { 
-    top: { categories },
-  } = state;
-  const articles = denormalizeArticles(state.top.articles, state.entities);
-  const pickup = denormalizeArticles(state.top.pickup, state.entities);
-  const ranking = denormalizeArticles(state.top.ranking, state.entities);
+  const { top, entities } = state;
+  const articles = denormalizeArticles(top.articles, entities);
+  const pickup = denormalizeArticles(top.pickup, entities);
+  const ranking = denormalizeArticles(top.ranking, entities);
+  const categories = denormalizeCategories(top.categories, entities);
   return { pickup, articles, categories, ranking };
 }
 
