@@ -1,19 +1,22 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 export default class CategoryList extends Component {
   render() {
-    return(
+    const { categories } = this.props;
+    const categoryNodes = categories.map( (category) =>
+      <li key={category.id} className="category__item">{category.title}</li>
+    );
+    return (
       <nav id="category">
         <ul className="category__list">
           <li className="category__item active">総合</li>
-          <li className="category__item">カテゴリー1</li>
-          <li className="category__item">カテゴリー2</li>
-          <li className="category__item">カテゴリー3</li>
-          <li className="category__item">カテゴリー4</li>
-          <li className="category__item">カテゴリー5</li>
-          <li className="category__item">カテゴリー6</li>
+          { categoryNodes }
         </ul>
       </nav>
     );
   }
+}
+
+CategoryList.propTypes = {
+  categories: PropTypes.array.isRequired
 }
