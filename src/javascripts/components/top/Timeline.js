@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import TimelineItem from '../partials/TimelineItem';
 
 export default class Timeline extends Component {
   render() {
-    const itemNodes = [1,2,3,4,5].map( (item) =>
-      <TimelineItem key={ item } />
+    const { articles } = this.props;
+    const itemNodes = articles.map( (article) =>
+      <TimelineItem key={ article.id } article={article} />
     );
     return(
       <div id="timeline">
@@ -20,4 +21,8 @@ export default class Timeline extends Component {
       </div>
     );
   }
+}
+
+Timeline.propTypes = {
+  articles: PropTypes.array.isRequired
 }
