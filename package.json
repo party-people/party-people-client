@@ -47,6 +47,7 @@
     "react-redux": "^4.0.6",
     "react-router": "^1.0.3",
     "redux": "^3.0.5",
+    "redux-form": "^4.1.1",
     "student-app-api-client": "git+ssh://git@github.com:we-b/student-app-api-client.git"
   }
 }
