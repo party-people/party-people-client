@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createNewArticle } from '../actions/articles';
-import EditorHeader from '../components/editor/EditorHeader';
-import EditorInfo from '../components/editor/EditorInfo';
+import EditorForm from '../components/editor/EditorForm';
 import EditorItems from '../components/editor/EditorItems';
 import EditorBody from '../components/editor/EditorBody';
 
@@ -10,15 +9,17 @@ class Editor extends Component {
   componentDidMount() {
     this.props.dispatch(createNewArticle());
   }
+
+  handleArticleSubmit() {
+    console.log(JSON.stringify(this.props.article));
+  }
+
   render() {
     const { article } = this.props
     return(
       <div id="editor">
         <div id="editor-erea">
-          <form id="editor-form">
-            <EditorHeader />
-            <EditorInfo />
-          </form>
+          <EditorForm article={article} onSubmit={this.handleArticleSubmit.bind(this)} />
           <EditorItems />
         </div>
         <EditorBody />
