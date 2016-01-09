@@ -2,6 +2,6 @@ const initialState = {
 
 }
 
-export default function current_user(state = initialState, action) {
+export default function currentUser(state = initialState, action) {
   return state;
 }
