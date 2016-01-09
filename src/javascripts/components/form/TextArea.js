@@ -1,14 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 
-export default class Input extends Component {
+export default class TextArea extends Component {
   render() {
-    const { field, className, type, placeholder, defaultValue } = this.props;
+    const { field, className, placeholder, defaultValue } = this.props;
     return(
-      <div className="input_group">
-        <div className="input_wrap">
-          <input
+      <div className="textarea_group">
+        <div className="textarea_wrap">
+          <textarea
             className={className}
-            type={type}
             name={field.name}
             placeholder={placeholder}
             defaultValue={defaultValue}
@@ -28,13 +27,12 @@ export default class Input extends Component {
   }
 }
 
-Input.propTypes = {
+TextArea.propTypes = {
   field: PropTypes.object.isRequired
 };
 
-Input.defaultProps = {
-  type: 'text',
-  className: 'input',
+TextArea.defaultProps = {
+  className: 'textarea',
   placeholder: '',
   defaultValue: ''
 };
