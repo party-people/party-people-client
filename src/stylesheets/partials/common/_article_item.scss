@@ -26,6 +26,7 @@
     }
     .text__area {
       float: left;
+      width: calc(100% - 180px - 20px);
       margin-left: 20px;
       .image__title {
         color: #333;
@@ -33,6 +34,7 @@
         font-weight: 600;
       }
       .image__comment {
+        margin-top: 10px;
         color: #666;
         font-size: 15px;
         font-weight: 400;
