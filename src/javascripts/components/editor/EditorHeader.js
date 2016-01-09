@@ -7,10 +7,10 @@ export default class EditorHeader extends Component {
         <div className="header__inner clearfix">
           <ul className="header__menu clearfix">
             <li className="menu__item">
-              <input className="btn" type="submit" value="下書き保存" />
+              <button className="btn">下書き保存</button>
             </li>
             <li className="menu__item">
-              <input className="btn" type="submit" value="公開する" />
+              <button className="btn">公開する</button>
             </li>
           </ul>
         </div>

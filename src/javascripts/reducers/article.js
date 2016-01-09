@@ -6,7 +6,8 @@ const initialState = {
   newArticle: {
     title: '',
     description: '',
-    thumnailUrl: ''
+    thumbnailUrl: '',
+    items: []
   }
 }
 
