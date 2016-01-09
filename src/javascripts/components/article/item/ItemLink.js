@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 
 export default class ItemLink extends Component {
   render() {
+    const { title, description, sourceUrl } = this.props;
     return (
       <div className="article__item--link">
         <h4 className="link__title"><a href={sourceUrl} target="_blank">{ title }</a></h4>
