@@ -8,6 +8,7 @@ $edit_image_size: 220px;
     padding: 20px 0;
   }
   .info__image {
+    position: relative;
     float: left;
     .image__input {
       position: absolute;
