@@ -1,4 +1,4 @@
-#edit-body {
+#editor-body {
   margin: 100px 0 50px 0;
   .body__inner {
     width: $content_width;
@@ -45,7 +45,8 @@
     a {
       color: #337ab7;
     }
-    span {
+    .line {
+      padding: 0 3px;
       color: #555;
     }
   }

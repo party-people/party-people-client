@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import EditorHeader from '../components/editor/EditorHeader';
 import EditorInfo from '../components/editor/EditorInfo';
 import EditorItems from '../components/editor/EditorItems';
+import EditorBody from '../components/editor/EditorBody';
 
 export default class Editor extends Component {
   render() {
@@ -14,6 +15,7 @@ export default class Editor extends Component {
           </form>
           <EditorItems />
         </div>
+        <EditorBody />
       </div>
     );
   }
