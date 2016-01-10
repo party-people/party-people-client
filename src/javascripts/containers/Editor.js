@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { createNewArticle } from '../actions/articles';
+import { createNewArticle, updateArticle } from '../actions/articles';
 import EditorForm from '../components/editor/EditorForm';
 import EditorItems from '../components/editor/EditorItems';
 import EditorBody from '../components/editor/EditorBody';
@@ -10,8 +10,8 @@ class Editor extends Component {
     this.props.dispatch(createNewArticle());
   }
 
-  handleArticleSubmit() {
-    console.log(JSON.stringify(this.props.article));
+  handleArticleSubmit(data) {
+    this.props.dispatch(updateArticle(JSON.stringify({ article: data })));
   }
 
   render() {
