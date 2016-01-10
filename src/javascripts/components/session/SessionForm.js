@@ -5,7 +5,7 @@ import Input from '../form/Input';
 class SessionForm extends Component {
   render() {
     const {
-      fields: { email, password, password_confirmation },
+      fields: { user_id, email, password, password_confirmation },
       handleSubmit
     } = this.props;
     return(
@@ -16,6 +16,12 @@ class SessionForm extends Component {
           </header>
           <div className="form__inner">
             <div className="form__item">
+              <label htmlFor="user-id">
+                User ID
+              </label>
+              <Input id="user-id" field={user_id} placeholder="ユーザー名を入力" />
+            </div>
+            <div className="form__item">
               <label htmlFor="user-email">
                 Email Adress
               </label>
@@ -25,7 +31,7 @@ class SessionForm extends Component {
               <label htmlFor="user-password">
                 Password
               </label>
-              <Input id="user-password" type="password" field={password} placeholder="英数字8文字以上" />
+              <Input id="user-password" type="password" field={password} placeholder="英数字6文字以上" />
             </div>
             <div className="form__item">
               <label htmlFor="user-password-confirmation">
