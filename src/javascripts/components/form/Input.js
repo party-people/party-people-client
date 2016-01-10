@@ -2,11 +2,12 @@ import React, { Component, PropTypes } from 'react';
 
 export default class Input extends Component {
   render() {
-    const { field, className, type, placeholder, defaultValue } = this.props;
+    const { field, id, className, type, placeholder, defaultValue } = this.props;
     return(
       <div className="input_group">
         <div className="input_wrap">
           <input
+            id={id}
             className={className}
             type={type}
             name={field.name}
@@ -29,6 +30,7 @@ export default class Input extends Component {
 }
 
 Input.propTypes = {
+  id: PropTypes.string.isRequired,
   field: PropTypes.object.isRequired
 };
 
