@@ -5,11 +5,11 @@ import EditorInfo from './EditorInfo';
 
 class EditForm extends Component {
   render() {
-    const { article, handleSubmit } = this.props;
+    const { article, handleSubmit, fields } = this.props;
     return (
       <form id="editor-form" onSubmit={handleSubmit}>
         <EditorHeader />
-        <EditorInfo article={article} />
+        <EditorInfo article={article} fields={fields} />
       </form>
     );
   }
@@ -26,5 +26,5 @@ EditForm.propTypes = {
 
 export default reduxForm({
   form: 'article',
-  fields: []
+  fields: ['title', 'description', 'thumbnail']
 })(EditForm);
