@@ -1,4 +1,5 @@
 import fetcher from '../fetcher';
+import { API_ROOT } from '../api/api';
 import { Schemas } from '../api/schema';
 import { normalize } from 'normalizr';
 
@@ -37,7 +38,7 @@ function fetchTopFailure(ex) {
 export function fetchTop() {
   return dispatch => {
     dispatch(fetchTopRequest());
-    return fetcher.get('http://localhost:9000/api/v1/top')
+    return fetcher.get(`${API_ROOT}/top`)
       .then(json => dispatch(fetchTopSuccess(json.body)))
       .catch(ex => dispatch(fetchTopFailure(ex)));
   };

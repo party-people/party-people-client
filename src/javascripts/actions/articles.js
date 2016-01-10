@@ -1,4 +1,5 @@
 import fetcher from '../fetcher';
+import { API_ROOT } from '../api/api';
 
 export const CREATE_NEW_ARTICLE = 'CREATE_NEW_ARTICLE';
 export const UPDATE_ARTICLE_REQUEST = 'UPDATE_ARTICLE_REQUEST';
@@ -32,7 +33,7 @@ function updateArticleFailure(ex) {
 export function updateArticle(data) {
   return dispatch => {
     dispatch(updateArticleRequest());
-    return fetcher.patch('http://localhost:9000/api/v1/articles/1', data)
+    return fetcher.patch(`${API_ROOT}/articles/1`, data)
       .then(json => dispatch(updateArticleSuccess(json.body)))
       .catch(ex => dispatch(updateArticleFailure(ex)))
   }
