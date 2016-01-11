@@ -1,11 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import { reduxForm } from 'redux-form';
 import Input from '../form/Input';
+import FileInput from '../form/FileInput';
 
 class SessionForm extends Component {
   render() {
     const {
-      fields: { user_id, email, password, password_confirmation },
+      fields: { user_id, email, password, password_confirmation, avatar },
       handleSubmit
     } = this.props;
     return(
@@ -38,6 +39,12 @@ class SessionForm extends Component {
                 Password Confirmation
               </label>
               <Input id="user-password-confirmation" type="password" field={password_confirmation} placeholder="もう一度パスワードを入力" />
+            </div>
+            <div className="form__item">
+              <label htmlFor="user-avatar">
+                Thumbnail Image
+              </label>
+              <FileInput id="user-avatar" field={avatar} />
             </div>
             <div className="form__submit">
               <input className="submit__button" type="submit" value="Create User" />
