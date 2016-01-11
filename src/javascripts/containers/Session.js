@@ -5,7 +5,21 @@ import SessionForm from '../components/session/SessionForm';
 
 class Session extends Component {
   handleSessionSubmit(data) {
-    this.props.dispatch(postUser(JSON.stringify({user: data})));
+    const formData = new FormData();
+    for(const key in data) {
+      const value = data[key];
+      if (value) {
+        if (value instanceof FileList) {
+          if (value.length > 0) {
+            formData.append(`user[${key}]`, data[key][0]);
+          }
+        }
+        else {
+          formData.append(`user[${key}]`, data[key]);
+        }
+      }
+    }
+    this.props.dispatch(postUser(formData));
   }
 
   render() {
