@@ -2,11 +2,12 @@ import React, { Component, PropTypes } from 'react';
 
 export default class FileInput extends Component {
   render() {
-    const { field, className } = this.props;
+    const { field, id, className } = this.props;
     return(
       <div className="file-input_group">
         <div className="file-input_wrap">
           <input
+            id={id}
             className={className}
             type='file'
             name={field.name}
@@ -28,11 +29,10 @@ export default class FileInput extends Component {
 }
 
 FileInput.propTypes = {
+  id: PropTypes.string.isRequired,
   field: PropTypes.object.isRequired
 };
 
 FileInput.defaultProps = {
-  className: 'input',
-  placeholder: '',
-  defaultValue: ''
+  className: 'input'
 };
