@@ -27,14 +27,27 @@ function postUserFailure(ex) {
 export function postUser(data) {
   return dispatch => {
     dispatch(postUserRequest());
-    return fetcher.post(`${API_ROOT}/users`, data)
-      .then(json => {
-        const body = json.body;
-        if (body.hasOwnProperty('error')) {
-          throw new Error(body['error']);
+    return ajaxPostUser(data)
+      .done(response => {
+        if (response.hasOwnProperty('error')) {
+          throw new Error(response['error']);
         }
-        dispatch(postUserSuccess(body));
+        dispatch(postUserSuccess(response));
       })
-      .catch(ex => dispatch(postUserFailure(ex)));
+      .fail(ex => dispatch(postUserFailure(ex)));
   }
+}
+
+function ajaxPostUser(data) {
+  const defer = $.Deferred();
+  $.ajax({
+    type: 'POST',
+    url: `${API_ROOT}/users`,
+    data: data,
+    processData: false,
+    contentType: false,
+    success: defer.resolve,
+    error: defer.reject
+  });
+  return defer.promise();
 }
