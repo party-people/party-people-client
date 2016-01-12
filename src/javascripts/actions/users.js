@@ -27,7 +27,7 @@ function postUserFailure(ex) {
 export function postUser(data) {
   return dispatch => {
     dispatch(postUserRequest());
-    return postFormData(data, ${API_ROOT}/users`)
+    return postFormData(data, `${API_ROOT}/users`)
       .done(response => {
         if (response.hasOwnProperty('error')) {
           throw new Error(response['error']);

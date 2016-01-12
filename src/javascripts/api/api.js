@@ -4,7 +4,25 @@ const VERSION = 'v1';
 
 export const API_ROOT = `http:\/\/${HOST}:${PORT}/api/${VERSION}`;
 
-export postFormData(data, url) {
+export function createFormData(data, topKey) {
+  const formData = new FormData();
+  for (const key in data) {
+    const value = data[key];
+    if (value) {
+      if (value instanceof FileList) {
+        if (value.length > 0) {
+          formData.append(`${topKey}[${key}]`, data[key][0]);
+        }
+      }
+      else {
+        formData.append(`${topKey}[${key}]`, data[key]);
+      }
+    }
+  }
+  return formData;
+}
+
+export function postFormData(data, url) {
   const defer = $.Deferred();
   $.ajax({
     type: 'POST',

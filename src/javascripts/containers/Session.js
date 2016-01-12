@@ -1,25 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'; 
+import { createFormData } from '../api/api';
 import { postUser } from '../actions/users';
 import SessionForm from '../components/session/SessionForm';
 
 class Session extends Component {
   handleSessionSubmit(data) {
-    const formData = new FormData();
-    for(const key in data) {
-      const value = data[key];
-      if (value) {
-        if (value instanceof FileList) {
-          if (value.length > 0) {
-            formData.append(`user[${key}]`, data[key][0]);
-          }
-        }
-        else {
-          formData.append(`user[${key}]`, data[key]);
-        }
-      }
-    }
-    this.props.dispatch(postUser(formData));
+    this.props.dispatch(postUser(createFormData(data, 'user')));
   }
 
   render() {
