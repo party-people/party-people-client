@@ -6,7 +6,7 @@ import createBrowserHistory from 'history/lib/createBrowserHistory';
 import configureStore from './store/configureStore';
 import App     from './containers/App';
 import Top     from './containers/Top';
-import Session from './containers/Session';
+import SignUp  from './containers/SignUp';
 import SignIn  from './containers/SignIn';
 import Article from './containers/Article';
 import Editor  from './containers/Editor';
@@ -16,7 +16,7 @@ const history = createBrowserHistory();
 const routes = (
   <Route component={ App }>
     <Route path="/" component={ Top } />
-    <Route path="/sign_up" component={ Session } />
+    <Route path="/sign_up" component={ SignUp } />
     <Route path="/sign_in" component={ SignIn } />
     <Route path="/articles/new" component={ Editor } />
     <Route path="/articles/:id/edit" component={ Editor } />

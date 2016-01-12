@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import { reduxForm } from 'redux-form';
-import validateSession from './validateSession';
+import validateSignUp from './validateSignUp';
 import Input from '../form/Input';
 import FileInput from '../form/FileInput';
 
-class SessionForm extends Component {
+class SignUpForm extends Component {
   render() {
     const {
       fields: { user_id, email, password, password_confirmation, avatar },
@@ -60,7 +60,7 @@ class SessionForm extends Component {
   }
 }
 
-SessionForm.propTypes = {
+SignUpForm.propTypes = {
   fields: PropTypes.object.isRequired,
   handleSubmit: PropTypes.func.isRequired,
 }
@@ -68,5 +68,5 @@ SessionForm.propTypes = {
 export default reduxForm({
   form: 'session',
   fields: ['user_id', 'email', 'password', 'password_confirmation', 'avatar'],
-  validate: validateSession
-})(SessionForm);
+  validate: validateSignUp
+})(SignUpForm);

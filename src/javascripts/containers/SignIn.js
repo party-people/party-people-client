@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { postUser } from '../actions/users';
 import SignInForm from '../components/session/SignInForm';
 
-class Session extends Component {
+class SignIn extends Component {
   handleSessionSubmit(data) {
     console.log(data);
   }
@@ -25,4 +25,4 @@ function mapStateToProps(state) {
   return state
 }
 
-export default connect(mapStateToProps)(Session);
+export default connect(mapStateToProps)(SignIn);

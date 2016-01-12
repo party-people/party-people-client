@@ -4,7 +4,7 @@ import validateSignIn from './validateSignIn';
 import Input from '../form/Input';
 import FileInput from '../form/FileInput';
 
-class SessionForm extends Component {
+class SignInForm extends Component {
   render() {
     const {
       fields: { email, password },
@@ -42,7 +42,7 @@ class SessionForm extends Component {
   }
 }
 
-SessionForm.propTypes = {
+SignInForm.propTypes = {
   fields: PropTypes.object.isRequired,
   handleSubmit: PropTypes.func.isRequired,
 }
@@ -51,4 +51,4 @@ export default reduxForm({
   form: 'session',
   fields: ['email', 'password'],
   validate: validateSignIn
-})(SessionForm);
+})(SignInForm);
