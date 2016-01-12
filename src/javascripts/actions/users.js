@@ -1,5 +1,5 @@
 import fetcher from '../fetcher';
-import { API_ROOT } from '../api/api';
+import { API_ROOT, postFormData } from '../api/api';
 
 export const POST_USER_REQUEST = 'POST_USER_REQUEST';
 export const POST_USER_SUCCESS = 'POST_USER_SUCCESS';
@@ -27,7 +27,7 @@ function postUserFailure(ex) {
 export function postUser(data) {
   return dispatch => {
     dispatch(postUserRequest());
-    return ajaxPostUser(data)
+    return postFormData(data, ${API_ROOT}/users`)
       .done(response => {
         if (response.hasOwnProperty('error')) {
           throw new Error(response['error']);
@@ -36,18 +36,4 @@ export function postUser(data) {
       })
       .fail(ex => dispatch(postUserFailure(ex)));
   }
-}
-
-function ajaxPostUser(data) {
-  const defer = $.Deferred();
-  $.ajax({
-    type: 'POST',
-    url: `${API_ROOT}/users`,
-    data: data,
-    processData: false,
-    contentType: false,
-    success: defer.resolve,
-    error: defer.reject
-  });
-  return defer.promise();
 }
