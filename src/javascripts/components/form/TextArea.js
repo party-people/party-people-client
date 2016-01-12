@@ -4,8 +4,8 @@ export default class TextArea extends Component {
   render() {
     const { field, className, placeholder, defaultValue } = this.props;
     return(
-      <div className="textarea_group">
-        <div className="textarea_wrap">
+      <div className="form__item textarea">
+        <div className="form__item__wrapper textarea_wrap">
           <textarea
             className={className}
             name={field.name}

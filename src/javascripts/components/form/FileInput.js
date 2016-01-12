@@ -4,8 +4,8 @@ export default class FileInput extends Component {
   render() {
     const { field, id, className } = this.props;
     return(
-      <div className="file-input_group">
-        <div className="file-input_wrap">
+      <div className="form__item file-input">
+        <div className="form__item__wrapper file-input_wrap">
           <input
             id={id}
             className={className}

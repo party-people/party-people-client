@@ -4,8 +4,8 @@ export default class Input extends Component {
   render() {
     const { field, id, className, type, placeholder, defaultValue } = this.props;
     return(
-      <div className="input_group">
-        <div className="input_wrap">
+      <div className="form__item input">
+        <div className="form__item__wrapper input_wrap">
           <input
             id={id}
             className={className}
