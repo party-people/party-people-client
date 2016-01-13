@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import { reduxForm } from 'redux-form';
 import validateSignIn from './validateSignIn';
 import Input from '../form/Input';
-import FileInput from '../form/FileInput';
 
 class SignInForm extends Component {
   render() {
