@@ -2,7 +2,8 @@ const HOST = 'localhost';
 const PORT = '9000';
 const VERSION = 'v1';
 
-export const API_ROOT = `http:\/\/${HOST}:${PORT}/api/${VERSION}`;
+export const ROOT = `http:\/\/${HOST}:${PORT}`
+export const API_ROOT = `${ROOT}/api/${VERSION}`;
 
 export function createFormData(data, topKey) {
   const formData = new FormData();
