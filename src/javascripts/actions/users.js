@@ -1,9 +1,41 @@
 import fetcher from '../fetcher';
-import { API_ROOT, postFormData } from '../api/api';
+import { ROOT, API_ROOT, postFormData } from '../api/api';
 
+export const POST_OAUTH_TOKEN_REQUEST = 'POST_OAUTH_TOKEN_REQUEST';
+export const POST_OAUTH_TOKEN_SUCCESS = 'POST_OAUTH_TOKEN_SUCCESS';
+export const POST_OAUTH_TOKEN_FAILURE = 'POST_OAUTH_TOKEN_FAILURE';
 export const POST_USER_REQUEST = 'POST_USER_REQUEST';
 export const POST_USER_SUCCESS = 'POST_USER_SUCCESS';
 export const POST_USER_FAILURE = 'POST_USER_FAILURE';
+
+function postOauthTokenRequest() {
+  return {
+    type: POST_OAUTH_TOKEN_REQUEST
+  }
+}
+
+function postOauthTokenSuccess(body) {
+  return {
+    type: POST_OAUTH_TOKEN_SUCCESS,
+    body
+  }
+}
+
+function postOauthTokenFailure(ex) {
+  return {
+    type: POST_OAUTH_TOKEN_FAILURE,
+    ex
+  }
+}
+
+export function postOauthToken(data) {
+  return dispatch => {
+    dispatch(postOauthTokenRequest());
+    return fetcher.post(`${API_ROOT}/oauth/token`, data)
+      .then(json => dispatch(postOauthTokenSuccess(json.body)))
+      .catch(ex => dispatch(postOauthTokenFailure(ex)));
+  };
+}
 
 function postUserRequest() {
   return {
